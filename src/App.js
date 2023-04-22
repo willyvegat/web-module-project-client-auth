@@ -2,16 +2,10 @@ import React from 'react';
 import './App.css';
 import { Route, Routes, Navigate } from 'react-router-dom';
 
-const Login = ()=> {
-  return (<h2>Login</h2>)
-}
+import Login from './components/Login';
+import FriendsList from './components/FriendsList';
+import AddFriend from './components/AddFriend';
 
-const FriendsList = ()=> {
-  return (<h2>FriendsList</h2>)
-}
-const AddFriend = ()=> {
-  return (<h2>AddFriend</h2>)
-}
 
 function App() {
   return (
