@@ -3,7 +3,7 @@ import React from 'react';
 const AddFriend = ()=> {
     return (
         <div>
-            <h2>AdFriend</h2>
+            <h2>Add Friend</h2>
             <form>
                 <div>
                     <label htmlFor='username'>Username: </label>
