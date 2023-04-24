@@ -7,6 +7,7 @@ import FriendsList from './components/FriendsList';
 import AddFriend from './components/AddFriend';
 import Logout from './components/Logout';
 
+import PrivateRoute from './components/PrivateRoute';
 
 function App() {
   return (
@@ -21,8 +22,20 @@ function App() {
         <Routes>
           <Route path="/" element={<Login />} />
           <Route path="/login" element={<Navigate to="/" />} />
-          <Route path="/friends" element={ <FriendsList />} />
-          <Route path="/friends/add" element={<AddFriend />} />
+          <Route path="/friends" 
+            element={ 
+              <PrivateRoute>
+                <FriendsList />
+              </PrivateRoute>
+            } 
+          />
+          <Route path="/friends/add" 
+            element={
+              <PrivateRoute>
+                <AddFriend />
+              </PrivateRoute>
+            } 
+          />
           <Route path="/logout" element={<Logout />} />
         </Routes>  
       </div>
